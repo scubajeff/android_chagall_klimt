@@ -28,7 +28,7 @@
 
   <project path=".org/android" name="platform/manifest" groups="pdk" />
   <!-- Github branch should stay nougat-release regardless of aosp branch for this project -->
-  <project path="android" name="alexmaloteaux/android_chagall_klimt" remote="github" revision="nougat-release" groups="pdk" >
+  <project path="android" name="scubajeff/android_klimt" remote="github" revision="nougat-release" groups="pdk" >
     <copyfile src="build.sh" dest="build.sh" />
   </project>
 
