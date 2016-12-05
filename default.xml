@@ -331,11 +331,15 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path=".org/frameworks/av" name="platform/frameworks/av" groups="pdk" />
+  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
+<!--
   <project path="frameworks/av" name="Schischu/aosp_android_frameworks_av" remote="github" groups="pdk" />
+-->
 
-  <project path=".org/frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs" />
+  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs" />
+<!--
   <project path="frameworks/base" name="Schischu/aosp_android_frameworks_base" remote="github" groups="pdk-cw-fs,pdk-fs" />
+-->
 
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
@@ -345,8 +349,10 @@
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path=".org/frameworks/native" name="platform/frameworks/native" groups="pdk" />
+  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
+<!--
   <project path="frameworks/native" name="Schischu/aosp_android_frameworks_native" remote="github" groups="pdk"  />
+-->
 
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs,pdk-fs" />
@@ -361,14 +367,18 @@
   <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path=".org/frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
+  <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
+<!--
   <project path="frameworks/opt/net/wifi" name="Schischu/aosp_android_frameworks_opt_net_wifi" remote="github" groups="pdk" />
+-->
 
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path=".org/frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
+<!--
   <project path="frameworks/opt/telephony" name="Schischu/aosp_android_frameworks_opt_telephony" remote="github" groups="pdk" />
+-->
 
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs,pdk-fs" />
@@ -454,8 +464,10 @@
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" groups="pdk-fs" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" groups="pdk-fs" />
 
-  <project path=".org/packages/apps/Settings" name="platform/packages/apps/Settings" groups="pdk-fs" />
+  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" groups="pdk-fs" />
+<!--
   <project path="packages/apps/Settings" name="Schischu/aosp_android_packages_apps_Settings" remote="github" groups="pdk-fs" />
+-->
 
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" groups="pdk-fs" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" groups="pdk-fs" />
