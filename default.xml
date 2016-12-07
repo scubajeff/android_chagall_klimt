@@ -7,15 +7,15 @@
   
   <remote  name="github"
            fetch="https://github.com/" 
-           revision="refs/heads/android-7.0.0_r3"/>
+           revision="android-7.1.1_r4"/>
   
-  <default revision="master"
+  <default revision="android-7.1.1_r4"
            remote="aosp"
            sync-c="true"
            sync-j="4" />
 
   <project path=".org/build" name="platform/build" groups="pdk,tradefed" />
-  <project path="build" name="Schischu/aosp_android_build" remote="github" groups="pdk,tradefed" >
+  <project path="build" name="scubajeff/android_build" remote="github" groups="pdk,tradefed" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
@@ -85,7 +85,7 @@
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs,pdk-fs" />
 
   <project path=".org/external/boringssl" name="platform/external/boringssl" groups="pdk" />
-  <project path="external/boringssl" name="Schischu/aosp_android_external_boringssl" remote="github" groups="pdk" />
+  <project path="external/boringssl" name="scubajeff/android_external_boringssl" remote="github" groups="pdk" />
 
   <project path="external/bouncycastle" name="platform/external/bouncycastle" groups="pdk" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
@@ -120,7 +120,7 @@
   <project path="external/droiddriver" name="platform/external/droiddriver" groups="pdk-cw-fs,pdk-fs" />
 
   <project path=".org/external/e2fsprogs" name="platform/external/e2fsprogs" groups="pdk" />
-  <project path="external/e2fsprogs" name="Schischu/aosp_android_external_e2fsprogs" remote="github" groups="pdk" />
+  <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" groups="pdk" />
 
   <project path="external/easymock" name="platform/external/easymock" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" groups="pdk-cw-fs,pdk-fs" />
@@ -130,7 +130,7 @@
   <project path="external/emma" name="platform/external/emma" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/esd" name="platform/external/esd" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path="external/exfat" name="CyanogenMod/android_external_exfat" remote="github" revision="cm-14.1" groups="pdk" />
+  <project path="external/exfat" name="CyanogenMod/android_external_exfat" remote="github" groups="pdk" />
 
   <project path="external/expat" name="platform/external/expat" groups="pdk" />
   <project path="external/eyes-free" name="platform/external/eyes-free" groups="pdk-cw-fs,pdk-fs" />
@@ -144,7 +144,7 @@
   <project path="external/fsck_msdos" name="platform/external/fsck_msdos" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/gemmlowp" name="platform/external/gemmlowp" />
 
-  <project path="external/fuse" name="CyanogenMod/android_external_fuse" remote="github" revision="cm-14.1" groups="pdk" />
+  <project path="external/fuse" name="CyanogenMod/android_external_fuse" remote="github" groups="pdk" />
 
   <project path="external/giflib" name="platform/external/giflib" groups="pdk,qcom_msm8x26" />
   <project path="external/glide" name="platform/external/glide" groups="pdk-fs" />
@@ -259,7 +259,7 @@
   <project path="external/nist-sip" name="platform/external/nist-sip" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/noto-fonts" name="platform/external/noto-fonts" groups="pdk" />
 
-   <project path="external/ntfs-3g" name="CyanogenMod/android_external_ntfs-3g" remote="github" revision="cm-14.1" groups="pdk" />
+   <project path="external/ntfs-3g" name="CyanogenMod/android_external_ntfs-3g" remote="github" groups="pdk" />
 
   <project path="external/oauth" name="platform/external/oauth" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/objenesis" name="platform/external/objenesis" groups="pdk-cw-fs,pdk-fs" />
@@ -331,15 +331,11 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-<!--
-  <project path="frameworks/av" name="Schischu/aosp_android_frameworks_av" remote="github" groups="pdk" />
--->
+  <project path=".org/frameworks/av" name="platform/frameworks/av" groups="pdk" />
+  <project path="frameworks/av" name="scubajeff/android_frameworks_av" remote="github" groups="pdk" />
 
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs" />
-<!--
-  <project path="frameworks/base" name="Schischu/aosp_android_frameworks_base" remote="github" groups="pdk-cw-fs,pdk-fs" />
--->
+  <project path=".org/frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs" />
+  <project path="frameworks/base" name="scubajeff/android_frameworks_base" remote="github" groups="pdk-cw-fs,pdk-fs" />
 
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
@@ -349,10 +345,8 @@
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
-<!--
-  <project path="frameworks/native" name="Schischu/aosp_android_frameworks_native" remote="github" groups="pdk"  />
--->
+  <project path=".org/frameworks/native" name="platform/frameworks/native" groups="pdk" />
+  <project path="frameworks/native" name="scubajeff/android_frameworks_native" remote="github" groups="pdk"  />
 
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs,pdk-fs" />
@@ -367,18 +361,14 @@
   <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
-<!--
-  <project path="frameworks/opt/net/wifi" name="Schischu/aosp_android_frameworks_opt_net_wifi" remote="github" groups="pdk" />
--->
+  <project path=".org/frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
+  <project path="frameworks/opt/net/wifi" name="scubajeff/android_frameworks_opt_net_wifi" remote="github" groups="pdk" />
 
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
-<!--
-  <project path="frameworks/opt/telephony" name="Schischu/aosp_android_frameworks_opt_telephony" remote="github" groups="pdk" />
--->
+  <project path=".org/frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="scubajeff/android_frameworks_opt_telephony" remote="github" groups="pdk" />
 
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs,pdk-fs" />
@@ -391,28 +381,28 @@
   <project path="hardware/akm" name="platform/hardware/akm" />
 
   <project path=".org/hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
-  <project path="hardware/broadcom/libbt" name="alexmaloteaux/aosp_android_hardware_broadcom_libbt" groups="pdk" remote="github"  revision="android-7.0.0_r19"/>
+  <project path="hardware/broadcom/libbt" name="scubajeff/android_hardware_broadcom_libbt" groups="pdk" remote="github" />
 
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="pdk,broadcom_wlan" />
   <project path="hardware/google/apf" name="platform/hardware/google/apf" groups="pdk" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
 
   <project path=".org/hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
-  <project path="hardware/libhardware" name="Schischu/aosp_android_hardware_libhardware" remote="github" groups="pdk" />
+  <project path="hardware/libhardware" name="scubajeff/android_hardware_libhardware" remote="github" groups="pdk" />
 
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
 
   <project path=".org/hardware/ril" name="platform/hardware/ril" groups="pdk" />
-  <project path="hardware/ril" name="Schischu/aosp_android_hardware_ril" remote="github" groups="pdk" />
+  <project path="hardware/ril" name="scubajeff/android_hardware_ril" remote="github" groups="pdk" />
 
   <!-- Github branch should stay nougat-release regardless of aosp branch for these projects -->
-  <project path="hardware/samsung" name="Schischu/android_hardware_samsung" remote="github" revision="nougat-release" groups="pdk" />
-  <project path="hardware/samsung_slsi/exynos" name="Schischu/android_hardware_samsung_slsi_exynos" remote="github" revision="nougat-release" groups="pdk" />
-  <project path="hardware/samsung_slsi/exynos5-insignal" name="Schischu/android_hardware_samsung_slsi_exynos5-insignal" remote="github" revision="nougat-release" groups="pdk" />
-  <project path="hardware/samsung_slsi/exynos5420" name="Schischu/android_hardware_samsung_slsi_exynos5420" remote="github" revision="nougat-release" groups="pdk" />
-  <project path="hardware/samsung_slsi/openmax" name="Schischu/android_hardware_samsung_slsi_openmax" remote="github" revision="nougat-release" groups="pdk" />
+  <project path="hardware/samsung" name="scubajeff/android_hardware_samsung" remote="github" groups="pdk" />
+  <project path="hardware/samsung_slsi/exynos" name="scubajeff/android_hardware_samsung_slsi_exynos" remote="github" groups="pdk" />
+  <project path="hardware/samsung_slsi/exynos5-insignal" name="scubajeff/android_hardware_samsung_slsi_exynos5-insignal" remote="github" groups="pdk" />
+  <project path="hardware/samsung_slsi/exynos5420" name="scubajeff/android_hardware_samsung_slsi_exynos5420" remote="github" groups="pdk" />
+  <project path="hardware/samsung_slsi/openmax" name="scubajeff/android_hardware_samsung_slsi_openmax" remote="github" groups="pdk" />
 
   <!-- project path="hardware/samsung_slsi-cm/exynos" name="CyanogenMod/android_hardware_samsung_slsi-cm_exynos" remote="github" revision="cm-13.0" groups="pdk" / -->
   <!-- project path="hardware/samsung_slsi-cm/exynos5" name="CyanogenMod/android_hardware_samsung_slsi-cm_exynos5" remote="github" revision="cm-13.0" groups="pdk" / -->
@@ -535,7 +525,7 @@
   <project path="system/connectivity/shill" name="platform/system/connectivity/shill" />
 
   <project path=".org/system/core" name="platform/system/core" groups="pdk" />
-  <project path="system/core" name="Schischu/aosp_android_system_core" remote="github" groups="pdk" />
+  <project path="system/core" name="scubajeff/android_system_core" remote="github" groups="pdk" />
 
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/firewalld" name="platform/system/firewalld" />
@@ -548,14 +538,14 @@
   <project path="system/security" name="platform/system/security" groups="pdk" />
 
   <project path=".org/system/sepolicy" name="platform/system/sepolicy" groups="pdk" />
-  <project path="system/sepolicy" name="Schischu/aosp_android_system_sepolicy" remote="github" groups="pdk" />
+  <project path="system/sepolicy" name="scubajeff/android_system_sepolicy" remote="github" groups="pdk" />
 
   <project path="system/tools/aidl" name="platform/system/tools/aidl" groups="pdk-cw-fs,pdk-fs" />
   <project path="system/tpm" name="platform/system/tpm" />
   <project path="system/update_engine" name="platform/system/update_engine" />
 
   <project path=".org/system/vold" name="platform/system/vold" groups="pdk" />
-  <project path="system/vold" name="alexmaloteaux/android_system_vold" remote="github" revision="cm-14.1" groups="pdk" />
+  <project path="system/vold" name="scubajeff/android_system_vold" remote="github" groups="pdk" />
 
   <project path="system/weaved" name="platform/system/weaved" />
   <project path="system/webservd" name="platform/system/webservd" />
